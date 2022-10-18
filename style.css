@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border_box;
-  font-family: consolas;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 body {
   display: flex;
@@ -64,13 +64,11 @@ body {
   justify-items: center;
   font-size: 1.2em;
   color: #666;
-  /* border: 2px solid #edf1f4; */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
   border-radius: 10px;
 }
 .dark .calculator .buttons span {
   color: #eee;
-  /* border: 2px solid #333; */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
     -5px -5px 10px rgba(255, 255, 255, 0.1);
 }
@@ -83,10 +81,8 @@ body {
     inset -5px -5px 10px rgba(255, 255, 255, 0.1);
 }
 .calculator .buttons span#clear {
-  /* grid-row: span 2; */
   background: #2196f3;
   color: #fff;
-  /* border: 2px solid #edf1f4; */
   font-size: 1rem;
   font-family: sans-serif;
   display: flex;
@@ -97,7 +93,6 @@ body {
   grid-row: span 2;
   background: #2196f3;
   color: #fff;
-  /* border: 2px solid #edf1f4; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,13 +101,7 @@ body {
   grid-row: span 2;
   background: #2196f3;
   color: #fff;
-  /* border: 2px solid #edf1f4; */
 }
-/* .dark .calculator .buttons span#clear,
-.dark .calculator .buttons span#plus,
-.dark .calculator .buttons span#equal {
-  /* border: 2px solid #333; */
-/* }  */
 .calculator .buttons span#clear:active,
 .calculator .buttons span#plus:active,
 .calculator .buttons span#equal:active {
@@ -128,17 +117,24 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #555;
   cursor: pointer;
   border: 2px solid #edf1f4;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .dark .toggleBtn {
   background: #edf1f4;
-  border: 2px solid #333;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
     -5px -5px 10px rgba(255, 255, 255, 0.25);
+}
+
+.dark .toggleBtn .fa-solid {
+  font-size: 1.5rem;
+  color: #2196f3;
 }

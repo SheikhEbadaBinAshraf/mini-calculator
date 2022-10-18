@@ -4,17 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator | Javascript Mini Project</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>
+      Calculator | Javascript Mini Project | by Sheikh Ubada Bin Ashraf-Ul-Haq
+    </title>
+    <!-- css file link -->
     <link rel="stylesheet" href="style.css" />
+    <!-- awesome icon link -->
+    <script
+      src="https://kit.fontawesome.com/87550c64f0.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    
+    <!-- Dark and light mode element -->
     <div class="dark">
-      <div class="toggleBtn"></div>
+      <div class="toggleBtn">
+        <i class="fa-solid fa-moon"></i>
+      </div>
     </div>
+
     <div class="calculator">
       <div class="buttons">
+        <!-- Value Displat Screen -->
         <h2 id="value"></h2>
+
         <span id="clear">clear</span>
         <span>/</span>
         <span>*</span>
@@ -33,15 +47,20 @@
         <span>00</span>
         <span>.</span>
         <span id="equal">=</span>
+
       </div>
     </div>
+
+    <!-- JavaScrip Part -->
     <script>
+      // DOM 
       let buttons = document.querySelector(".buttons");
       let btn = document.querySelectorAll("span");
       let value = document.getElementById("value");
       let toggleBtn = document.querySelector(".toggleBtn");
       let body = document.querySelector("body");
 
+      // Looping
       for (let i = 0; i < btn.length; i++) {
         btn[i].addEventListener("click", function () {
           if (this.innerHTML == "=") {
@@ -56,8 +75,17 @@
         });
       }
 
+      // Dark and Ligh mode function
       toggleBtn.onclick = function () {
+
+        toggleBtn.innerHTML = "";
         body.classList.toggle("dark");
+
+        if (body.className === "dark") {
+          toggleBtn.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+        } else {
+          toggleBtn.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+        }
       };
     </script>
   </body>
